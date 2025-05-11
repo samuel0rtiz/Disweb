@@ -2,17 +2,17 @@ function init(tipo) {
   switch (tipo) {
     case 1: //al iniciar la aplicacion o reiniciar
       console.log("Entra case1");
+      document.getElementById("Targetadebienvenida").style.display = "block";
 
       document.getElementById("cajas").style.display = "none";
       document.getElementById("mostrar").style.display = "none";
-      document.getElementById("Targetadebienvenida").style.display = "block";
 
       break;
 
     case 2:
       console.log("case2");
 
-      console.log("muestra formulario");
+      console.log("mostrar formulario");
       document.getElementById("cajas").style.display = "block";
       document.getElementById("Targetadebienvenida").style.display = "none";
 
@@ -29,7 +29,6 @@ function init(tipo) {
 function guardar_datos() {
   console.log("Guradando datos");
   document.getElementById("cajas").style.display = "none";
-  document.getElementById("boton_guardar").style.display = "none";
   document.getElementById("mostrar").style.display = "block";
 
   datos = {};

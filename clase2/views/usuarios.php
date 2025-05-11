@@ -30,14 +30,10 @@ include_once 'header.html';
   </div>
 
 
-  <div id="boton_guardar">
     <button type="button" onclick="guardar_datos()" class="btn btn-primary">guardar</button>
 
-  </div>
-  <div id="boton_cancelar">
     <button type="button" onclick="init(1)" class="btn btn-danger">Cancelar</button>
 
-    </div>
 
 
  
