@@ -18,6 +18,24 @@ class Formulario extends Conexion {
     
         return $sql->execute();
     }
+    public function listar_usuarios (){
+        $query = "SELECT  id_usuario,nombre,carrera FROM tb_usuario";
+        $sql = Conexion::conectar()->prepare($query);
+        if ($sql->execute()) {
+            $rows=$sql->fetchALL(\PDO::FETCH_OBJ);
+            return json_encode($rows);
+
+        } else {
+            return false;
+        }
+        
+    
+     
+
+
+
+
+    }
     
 }
 ?>
