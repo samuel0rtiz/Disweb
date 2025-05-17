@@ -10,6 +10,27 @@
             $rspta = $operaciones->altaUsuario($nombre, $carrera, $tipo);
             echo $rspta ? 'Exito' : 'Fallo';
             break;
+        case 'listar_usuarios':   
+            $rspta=$operaciones->listar_usuarios();
+            $data=[];
+            foreach(json_decode($rspta)as $clave=>$val){
+                $data[$clave]=
+                ["id_usuario"=>$val->id_usuario,
+                "nombre"=>$val->nombre,
+                "carrera"=>$val->carrera,
+                "boton"=>'
+                <button type="button" class="btn btn-warning"><i class="bi bi-pencil-fill"></i></button>
+                <button type="button" class="btn btn-danger"><i class="bi bi-trash3-fill"></i></button>'
+                
+            ];
+
+
+
+            } 
+            echo json_encode(["data" => $data]);
+
+
+        break;
 
         
         
